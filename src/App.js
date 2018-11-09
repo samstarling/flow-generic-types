@@ -1,17 +1,7 @@
 // @flow
 import * as React from "react";
 
-import GenericList from "./components/GenericList";
-
-class NumberList extends React.Component<*> {
-  renderItem = (n: number) => {
-    return <span>Number is {n}</span>;
-  };
-
-  render() {
-    return <GenericList items={[1, 4, 3]} renderItem={this.renderItem} />;
-  }
-}
+import NumberList from "./components/NumberList";
 
 class App extends React.Component<*> {
   render() {
