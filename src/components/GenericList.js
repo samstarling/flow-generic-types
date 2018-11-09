@@ -3,7 +3,7 @@ import * as React from "react";
 
 export type Props<T> = {
   items: Array<T>,
-  renderItem: (item: T) => React.Node
+  renderItem: T => React.Node
 };
 
 export default class GenericList<T> extends React.Component<Props<T>> {
