@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-type Props<T> = {
+export type Props<T> = {
   items: Array<T>,
   renderItem: <T>(item: T) => React.Node
 };
