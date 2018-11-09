@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import GenericList, { type Props } from "./components/GenericList";
+import GenericList from "./components/GenericList";
 
 class App extends React.Component<*> {
   render() {
