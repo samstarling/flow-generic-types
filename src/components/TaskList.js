@@ -1,10 +1,9 @@
 // @flow
 import * as React from "react";
 
-import GenericList from "./GenericList";
+import GenericList, { type ListItem } from "./GenericList";
 
-export type Task = {
-  key: string,
+export type Task = ListItem & {
   title: string,
   isCompleted: boolean
 };
