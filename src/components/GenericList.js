@@ -1,12 +1,12 @@
 // @flow
 import * as React from "react";
 
-export type ListItem = { +key: string };
-
 type Props<T> = {
   items: Array<T>,
   renderItem: T => React.Node
 };
+
+export type ListItem = { +key: string };
 
 export default class GenericList<T: ListItem> extends React.Component<
   Props<T>
