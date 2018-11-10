@@ -6,9 +6,11 @@ export type Props<T> = {
   renderItem: T => React.Node
 };
 
-export default class GenericList<T> extends React.Component<Props<T>> {
+export default class GenericList<T: { +key: string }> extends React.Component<
+  Props<T>
+> {
   renderListItem: T => React.Node = (item: T) => {
-    return <li>{this.props.renderItem(item)}</li>;
+    return <li key={item.key}>{this.props.renderItem(item)}</li>;
   };
 
   render() {
