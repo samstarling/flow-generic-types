@@ -3,7 +3,7 @@ import * as React from "react";
 
 type Props<T> = {
   initialData: T,
-  renderForm: T => React.Node,
+  renderForm: (data?: T) => React.Node,
   onSubmit: T => void
 };
 
@@ -20,11 +20,13 @@ export default class GenericForm<T> extends React.Component<
     this.state = { data: props.initialData };
   }
 
+  handleSubmit = (event: any) => {
+    this.props.onSubmit(this.state.data);
+  };
+
   handleChange = (event: SyntheticInputEvent<HTMLFormElement>) => {
     const change = { [event.target.name]: event.target.value };
-    this.setState({ data: { ...this.state.data, ...change } }, () =>
-      console.log(this.state)
-    );
+    this.setState({ data: { ...this.state.data, ...change } });
   };
 
   render() {

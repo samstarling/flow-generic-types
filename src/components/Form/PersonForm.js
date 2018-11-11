@@ -13,7 +13,7 @@ type Props = {
 };
 
 export default class PersonForm extends React.Component<Props> {
-  renderForm = (person: Person) => {
+  renderForm = (person?: Person) => {
     return (
       <div>
         <div>
