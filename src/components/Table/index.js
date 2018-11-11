@@ -11,9 +11,7 @@ type Props<T> = {
 
 export type TableRow = { +key: string };
 
-export default class GenericTable<T: TableRow> extends React.Component<
-  Props<T>
-> {
+export default class Table<T: TableRow> extends React.Component<Props<T>> {
   renderHeadings = () => {
     return (
       <tr>

@@ -11,10 +11,7 @@ type State<T> = {
   data: T
 };
 
-export default class GenericForm<T> extends React.Component<
-  Props<T>,
-  State<T>
-> {
+export default class Form<T> extends React.Component<Props<T>, State<T>> {
   constructor(props: Props<T>) {
     super(props);
     this.state = { data: props.initialData };

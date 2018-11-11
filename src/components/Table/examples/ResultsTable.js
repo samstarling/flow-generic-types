@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import GenericTable, { type TableRow } from "../";
+import Table, { type TableRow } from "../";
 
 export type Result = TableRow & {
   name: string,
@@ -19,7 +19,7 @@ export default class ResultsTable extends React.Component<Props> {
 
   render() {
     return (
-      <GenericTable
+      <Table
         headings={["Name", "Score"]}
         items={this.props.results}
         renderItem={this.renderItem}

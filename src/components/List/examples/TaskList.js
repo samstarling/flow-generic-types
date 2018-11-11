@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import GenericList, { type ListItem } from "../";
+import List, { type ListItem } from "../";
 
 export type Task = ListItem & {
   title: string,
@@ -22,8 +22,6 @@ export default class TaskList extends React.Component<Props> {
   };
 
   render() {
-    return (
-      <GenericList items={this.props.items} renderItem={this.renderItem} />
-    );
+    return <List items={this.props.items} renderItem={this.renderItem} />;
   }
 }

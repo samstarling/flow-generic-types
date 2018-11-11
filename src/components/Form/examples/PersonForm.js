@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import GenericForm from "../";
+import Form from "../";
 
 export type Person = {
   firstName: string,
@@ -30,7 +30,7 @@ export default class PersonForm extends React.Component<Props> {
 
   render() {
     return (
-      <GenericForm
+      <Form
         initialData={this.props.person}
         renderForm={this.renderForm}
         onSubmit={console.log}
