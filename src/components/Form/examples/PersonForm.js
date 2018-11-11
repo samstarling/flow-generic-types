@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import GenericForm from "./GenericForm";
+import GenericForm from "../";
 
 export type Person = {
   firstName: string,
@@ -17,11 +17,11 @@ export default class PersonForm extends React.Component<Props> {
     return (
       <div>
         <div>
-          First name:{" "}
+          <span>First name:</span>
           <input name="firstName" defaultValue={person && person.firstName} />
         </div>
         <div>
-          Last name:{" "}
+          <span>Last name:</span>
           <input name="lastName" defaultValue={person && person.lastName} />
         </div>
       </div>

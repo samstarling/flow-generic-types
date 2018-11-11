@@ -3,7 +3,7 @@ import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
 
-import TaskList, { type Task } from "./TaskList";
+import TaskList, { type Task } from "./examples/TaskList";
 
 const tasks: Array<Task> = [
   { key: "1", title: "Wash car", isCompleted: true },
@@ -11,4 +11,6 @@ const tasks: Array<Task> = [
   { key: "3", title: "Collect parcel", isCompleted: false }
 ];
 
-storiesOf("TaskList", module).add("Default", () => <TaskList items={tasks} />);
+storiesOf("List/TaskList", module).add("Default", () => (
+  <TaskList items={tasks} />
+));

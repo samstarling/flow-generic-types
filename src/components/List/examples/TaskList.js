@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import GenericList, { type ListItem } from "./GenericList";
+import GenericList, { type ListItem } from "../";
 
 export type Task = ListItem & {
   title: string,
